@@ -14,7 +14,7 @@ import (
 type PingResult struct {
 	IP          string    `json:"ip"`
 	PingTime    time.Time `json:"ping_time"`
-	LastSuccess time.Time `json:"last_sccess"`
+	LastSuccess time.Time `json:"last_success"`
 }
 
 var db *sql.DB

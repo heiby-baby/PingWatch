@@ -7,12 +7,13 @@ function App() {
   useEffect(() => {
     fetch('http://localhost:8080/ping-results')
       .then((response) => response.json())
+      .then((data) => setResults(data || []))
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
-    return date.toLocaleString();   
+    return date.toLocaleString();
   };
 
   return (
